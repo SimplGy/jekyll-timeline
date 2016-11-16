@@ -13,6 +13,17 @@ This isn't build to handle and correctly arrange overlapping timeframes, so it w
 * Star Trek Seasons, Ships, and Captains
 * Star Wars films
 
+## Examples
+
+<p style="vertical-align: top">
+<a href="http://simple.gy/resume/pretty">
+<img src="https://cloud.githubusercontent.com/assets/548809/20337440/62388d9c-ab8e-11e6-83ba-6d3526e2f969.png"/>
+</a>
+<a href="http://simple.gy/siblings/">
+<img src="https://cloud.githubusercontent.com/assets/548809/20337453/80be6822-ab8e-11e6-9cb1-155adf5dba15.png"/>
+</a>
+</p>
+
 ## Key Benefits
 
 * No Jeykll plugins needed (this is why you can use it with GitHub Pages)
