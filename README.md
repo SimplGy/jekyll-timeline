@@ -15,7 +15,6 @@ This isn't build to handle and correctly arrange overlapping timeframes, so it w
 
 ## Examples
 
-<p style="vertical-align: top">
 <a href="http://simple.gy/resume/pretty">
 <img src="https://cloud.githubusercontent.com/assets/548809/20337440/62388d9c-ab8e-11e6-83ba-6d3526e2f969.png"/>
 </a>
