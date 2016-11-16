@@ -21,6 +21,11 @@ Printable Resume Timeline ([live](http://simple.gy/resume/pretty)):
 <img src="https://cloud.githubusercontent.com/assets/548809/20337440/62388d9c-ab8e-11e6-83ba-6d3526e2f969.png"/>
 </a>
 
+## Getting Started
+
+1. Clone the project or download the [`dist`]() folder
+2. Copy those files into your `_include` folder in jekyll
+3. Use them, following the examples I've provided in the [`examples`]() folder
 
 ## Key Benefits
 

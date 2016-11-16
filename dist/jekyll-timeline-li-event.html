@@ -1,0 +1,83 @@
+{% comment %}
+
+Depends on:
+* include.pxPerMonth
+* event
+
+For each event, we display name and description
+I use `from` and `to` properties to calculate top position and height
+I also use this to calculate pretty date range display phrases 
+
+{% endcomment %}
+
+
+{% comment %} ------------------------------------------ Constants -- {% endcomment %}
+{% assign secondsPerMonth = 2628288.0 %}
+{% comment %} 60 * 60 * 24 * 30.42. It must be be a float (end with .0) so divided_by doesn't floor the result {% endcomment %}
+
+
+
+{% assign now = site.time | date: '%s' %}
+
+
+{% comment %} ---------------------------------------- Offset from top because we always draw a full year --- {% endcomment %}
+{% assign curMonth = site.time | date: '%m' %}
+{% assign monthOffset = 12 | minus: curMonth %}
+
+
+
+{% comment %} ---------------------------------------- Default values for to and from --- {% endcomment %}
+{% if event.to == "now" %}
+{% assign to = now %}
+{% else %}
+{% assign to = event.to | date: '%s' %}
+{% endif %}
+
+{% if event.from %}
+{% assign from = event.from | date: '%s' %}
+{% else %}
+{% assign secondsPerQuarter = secondsPerMonth | times: 4 %}
+{% assign from = to | minus: secondsPerQuarter %}
+{% endif %}
+
+
+{% comment %} ---------------------------------------- Set top position and height --- {% endcomment %}
+{% comment %}
+top: now - to ( / sPerMonth * pxPerMonth)
+height: to - from ( / sPerMonth * pxPerMonth)
+{% endcomment %}
+{% assign eventAge = now | minus: to | divided_by: secondsPerMonth %}
+{% assign top = eventAge | plus: monthOffset | times: include.pxPerMonth %}
+{% assign eventLength = to | minus: from | divided_by: secondsPerMonth | plus: 1 %}
+{% comment %} plus: 1 to be inclusive. If I worked from 2016-01 to 2016-02, I should cover both months {% endcomment %}
+{% assign height = eventLength | times: include.pxPerMonth %}
+
+
+{% comment %} ---------------------------------------- Set display strings --- {% endcomment %}
+{% assign toDateDisplay = event.to | date: '%b %Y' %}
+{% if event.from %}
+{% assign dateDisplay = event.from  | date: '%b %Y' | append: ' to ' | append: toDateDisplay %}
+{% assign yrs = eventLength | divided_by: 12 | floor %}
+{% assign mo = eventLength | modulo: 12 | floor %}
+{% if yrs == 0 %}
+{% assign duration = mo | append: 'mo' %}
+{% else %}
+{% assign duration = yrs | append: 'yr' %}
+{% if mo != 0 %}
+{% assign duration = duration | append: ' ' | append: mo | append: 'mo' %}
+{% endif %}
+{% endif %}
+
+{% else %}
+{% assign dateDisplay = toDateDisplay %}
+{% assign secondsPerQuarter = secondsPerMonth | times: 4 %}
+{% assign duration = 'event' %}
+{% endif %}
+
+
+
+<li class="event" tabindex="0"
+    style="top: {{top}}px; height: {{height}}px; min-height: {{height}}px;" title="{{event.name}}: {{dateDisplay}} ({{duration}})">
+  <div class="title">{{ event.name | markdownify }}</div>
+  <div class="description">{{ event.description | markdownify }}</div>
+</li>

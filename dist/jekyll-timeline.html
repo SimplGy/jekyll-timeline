@@ -1,0 +1,102 @@
+{% comment %} ------------------------------------------ Dependencies
+  This template depends on:
+  include.startYear        // Int. Four digit year
+  include.timelineHeight   // Int. Pixel count
+  include.col1Title
+  include.col1Events: [    // Array of objects with the following fields. Can use _data/foo.yml or front matter to specify
+    {
+      name: String
+      to: Date
+      from: Date
+      description: String?
+    }
+  ]
+{% endcomment %}
+
+
+
+{% comment %} ------------------------------------------ Calculate an array of years for display -- {% endcomment %}
+{% assign endYear = site.time | date: '%Y' %}
+{% assign yearString = "" %}
+{% for y in (include.startYear..endYear) %}
+{% assign yearString = yearString | append: y | append: ',' %}
+{% endfor %}
+{% assign years = yearString | split: ',' | reverse %}
+
+
+
+{% comment %} ------------------------------------------ Calculate pixel sizes for quantities of time
+use a float to get non-rounded output from `divided_by`: https://shopify.github.io/liquid/filters/divided_by/
+{% endcomment %}
+{% assign yearCountAsFloat = years.size | times: 1.0 %} {% comment %}  {% endcomment %}
+{% assign yearHeight = include.timelineHeight | divided_by: yearCountAsFloat %}
+{% assign monthHeight = yearHeight | divided_by: 12.0 %}
+
+
+
+<div class="jekyllTimeline" style="height: {{include.timelineHeight}}px;"
+     data-comment="These data properties are for transparency; not actually used to build the timeline."
+     data-site-time="{{ site.time | date: '%Y-%-m' }}"
+     data-years-size="{{include.startYear}}-{{endYear}}: {{years.size}}"
+     data-year-height="{{yearHeight}}"
+     data-month-height="{{monthHeight}}">
+
+
+
+  {% comment %} --- Print out lines that represent each year -- {% endcomment %}
+
+  {% for year in years %}
+  <b class="y{{ year }}" style="height: {{yearHeight}}px; top: {{ yearHeight | times: forloop.index0 }}px;">
+    <label>{{ year }}</label>
+    {% for i in (0..11) %}
+    {% assign mo = 12 | minus: i %}
+    {% case mo %}
+    {% when 1 %}{% assign month = "January" %}
+    {% when 2 %}{% assign month = "February" %}
+    {% when 3 %}{% assign month = "March" %}
+    {% when 4 %}{% assign month = "April" %}
+    {% when 5 %}{% assign month = "May" %}
+    {% when 6 %}{% assign month = "June" %}
+    {% when 7 %}{% assign month = "July" %}
+    {% when 8 %}{% assign month = "August" %}
+    {% when 9 %}{% assign month = "September" %}
+    {% when 10 %}{% assign month = "October" %}
+    {% when 11 %}{% assign month = "November" %}
+    {% when 12 %}{% assign month = "December" %}
+    {% endcase %}
+    <i style="height: {{monthHeight}}px" title="{{month}} {{year}}"></i>
+    {% endfor %}
+  </b>
+  {% endfor %}
+
+
+
+  {% comment %} --- Print timeline event columns --- {% endcomment %}
+  {% if include.col1Events %}
+    <ol class="col col0" {% if include.col1Width %} style="flex-basis:{{include.col1Width}}" {% endif %} >
+      <li class="colTitle"><span>{{ include.col1Title }}</span></li>
+      {% for event in include.col1Events %}
+        {% include jekyll-timeline-li-event.html pxPerMonth=monthHeight %}
+      {% endfor %}
+    </ol>
+  {% endif %}
+
+  {% if include.col2Events %}
+    <ol class="col col1" {% if include.col2Width %} style="flex-basis:{{include.col2Width}}" {% endif %} >
+      <li class="colTitle"><span>{{ include.col2Title }}</span></li>
+      {% for event in include.col2Events %}
+        {% include jekyll-timeline-li-event.html pxPerMonth=monthHeight %}
+      {% endfor %}
+    </ol>
+  {% endif %}
+
+  {% if include.col3Events %}
+    <ol class="col col2" {% if include.col3Width %} style="flex-basis:{{include.col3Width}}" {% endif %} >
+      <li class="colTitle"><span>{{ include.col3Title }}</span></li>
+      {% for event in include.col3Events %}
+        {% include jekyll-timeline-li-event.html pxPerMonth=monthHeight %}
+      {% endfor %}
+    </ol>
+  {% endif %}
+
+</div>
