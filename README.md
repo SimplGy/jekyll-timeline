@@ -26,7 +26,7 @@ Printable Resume Timeline ([live](http://simple.gy/resume/pretty)):
 
 * No Jeykll plugins needed (this is why you can use it with GitHub Pages)
 * No JavaScript at all, so it's easy to customize
-* Prints very well (only on webkit thanks to `[-webkit-print-color-adjust](https://developer.mozilla.org/en-US/docs/Web/CSS/-webkit-print-color-adjust)`)
+* Prints almost pixel perfect (webkit only. Thanks to [`-webkit-print-color-adjust`](https://developer.mozilla.org/en-US/docs/Web/CSS/-webkit-print-color-adjust))
 
 ## Limitations
 
