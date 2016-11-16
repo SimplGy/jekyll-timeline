@@ -4,7 +4,7 @@ This is a small group of html and css includes for Jekyll that lets you create a
 
 ## Use Cases
 
-This isn't build to handle and correctly arrange overlapping timeframes, so it works best for use cases that are naturally non-overlapping, such as:
+This wasn't built to stagger overlapping timeframes, so it works best for use cases that are naturally non-overlapping, such as:
 
 * Places you and your family have lived
 * Heads of state like presidents and other world leaders
