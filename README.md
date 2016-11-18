@@ -91,3 +91,8 @@ Use on your page:
 ## Similar Projects
 
 * [timeline-jekyll-theme](https://github.com/kirbyt/timeline-jekyll-theme) is a whole site theme rather than a reusable component. Might be a good fit if you like the vertical bubble style and have sparse events.
+
+## Screenshot config
+
+    webkit2png http://simple.gy/jekyll-timeline/five-col/ --width=1000 --clipwidth=250 --clipheight=150
+
