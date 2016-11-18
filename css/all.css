@@ -1,4 +1,9 @@
-@import url(site.css);
+body {
+  font-family: -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", Helvetica, sans-serif;
+  line-height: 1.5;
+  font-size: 16px;
+  background: #fcfcfc; }
+
 /* Coolors Exported Palette - coolors.co/9dd7f9-c0e589-f2e480-ffcfa0-e1d0ef */
 .jekyllTimeline ol {
   list-style: none; }

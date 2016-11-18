@@ -9,7 +9,7 @@ layout: base
 <ul>
   {% for post in site.posts %}
     <li class="post summary">
-      <a href="{{ site.baseurl }}/{{ post.url }}">{{ post.title }}</a>
+      <a href="{{ site.github.repositoryName }}{{ post.url }}">{{ post.title }}</a>
     </li>
   {% endfor %}
 </ul>
