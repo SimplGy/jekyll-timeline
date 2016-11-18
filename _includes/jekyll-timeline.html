@@ -73,7 +73,7 @@ use a float to get non-rounded output from `divided_by`: https://shopify.github.
 
   {% comment %} --- Print timeline event columns --- {% endcomment %}
   {% if include.col1Events %}
-    <ol class="col col0" {% if include.col1Width %} style="flex-basis:{{include.col1Width}}" {% endif %} >
+    <ol class="col col1" {% if include.col1Width %} style="flex-basis:{{include.col1Width}}" {% endif %} >
       <li class="colTitle"><span>{{ include.col1Title }}</span></li>
       {% for event in include.col1Events %}
         {% include jekyll-timeline-li-event.html pxPerMonth=monthHeight %}
@@ -82,7 +82,7 @@ use a float to get non-rounded output from `divided_by`: https://shopify.github.
   {% endif %}
 
   {% if include.col2Events %}
-    <ol class="col col1" {% if include.col2Width %} style="flex-basis:{{include.col2Width}}" {% endif %} >
+    <ol class="col col2" {% if include.col2Width %} style="flex-basis:{{include.col2Width}}" {% endif %} >
       <li class="colTitle"><span>{{ include.col2Title }}</span></li>
       {% for event in include.col2Events %}
         {% include jekyll-timeline-li-event.html pxPerMonth=monthHeight %}
@@ -91,9 +91,27 @@ use a float to get non-rounded output from `divided_by`: https://shopify.github.
   {% endif %}
 
   {% if include.col3Events %}
-    <ol class="col col2" {% if include.col3Width %} style="flex-basis:{{include.col3Width}}" {% endif %} >
+    <ol class="col col3" {% if include.col3Width %} style="flex-basis:{{include.col3Width}}" {% endif %} >
       <li class="colTitle"><span>{{ include.col3Title }}</span></li>
       {% for event in include.col3Events %}
+        {% include jekyll-timeline-li-event.html pxPerMonth=monthHeight %}
+      {% endfor %}
+    </ol>
+  {% endif %}
+
+  {% if include.col4Events %}
+    <ol class="col col4" {% if include.col4Width %} style="flex-basis:{{include.col4Width}}" {% endif %} >
+      <li class="colTitle"><span>{{ include.col4Title }}</span></li>
+      {% for event in include.col4Events %}
+        {% include jekyll-timeline-li-event.html pxPerMonth=monthHeight %}
+      {% endfor %}
+    </ol>
+  {% endif %}
+
+  {% if include.col5Events %}
+    <ol class="col col5" {% if include.col5Width %} style="flex-basis:{{include.col5Width}}" {% endif %} >
+      <li class="colTitle"><span>{{ include.col5Title }}</span></li>
+      {% for event in include.col5Events %}
         {% include jekyll-timeline-li-event.html pxPerMonth=monthHeight %}
       {% endfor %}
     </ol>

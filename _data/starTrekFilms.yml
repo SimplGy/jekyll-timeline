@@ -1,0 +1,43 @@
+# https://en.wikipedia.org/wiki/Star_Trek#The_Original_Series_.281966.E2.80.9369.29
+
+- name: "Star Trek: The Motion Picture"
+  to: 1979-12-07
+
+- name: "Star Trek II: The Wrath of Khan"
+  to: 1982-06-04
+
+- name: "Star Trek III: The Search for Spock"
+  to: 1984-06-01
+
+- name: "Star Trek IV: The Voyage Home"
+  to: 1986-11-26
+
+- name: "Star Trek V: The Final Frontier"
+  to: 1989-06-09
+
+- name: "Star Trek VI: The Undiscovered Country"
+  to: 1991-12-06
+
+- name: Star Trek Generations
+  to: 1994-11-18
+
+- name: "Star Trek: First Contact"
+  to: 1996-11-22
+
+- name: "Star Trek: Insurrection"
+  to: 1998-12-11
+
+- name: "Star Trek: Nemesis"
+  to: 2002-12-13
+
+- name: Star Trek
+  to: 2009-05-08
+  description: J.J. Abrams
+
+- name: Star Trek Into Darkness
+  to: 2013-05-16
+  description: J.J. Abrams
+
+- name: Star Trek Beyond
+  to: 2016-07-22
+  description: Justin Lin

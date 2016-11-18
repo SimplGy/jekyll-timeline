@@ -1,0 +1,173 @@
+/* Coolors Exported Palette - coolors.co/9dd7f9-c0e589-f2e480-ffcfa0-e1d0ef */
+.jekyllTimeline ol {
+  list-style: none; }
+.jekyllTimeline p {
+  margin: 0; }
+
+.jekyllTimelineWrapper {
+  position: relative;
+  background: white;
+  border: 1px solid #f2f2f2;
+  border-radius: 2px;
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 20px;
+  padding-left: 40px;
+  padding-bottom: 40px;
+  overflow: hidden; }
+  @media (max-width: 603px) {
+    .jekyllTimelineWrapper {
+      padding: 10px;
+      padding-left: 20px;
+      padding-bottom: 20px; } }
+  .jekyllTimelineWrapper:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 30px;
+    background: linear-gradient(to bottom, transparent, white 65%); }
+
+.jekyllTimeline {
+  font-size: 14px;
+  position: relative;
+  display: flex;
+  margin-top: 60px;
+  padding-left: 10px; }
+  .jekyllTimeline * {
+    -webkit-print-color-adjust: exact; }
+  .jekyllTimeline b {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    box-sizing: border-box;
+    border-bottom: 1px solid #d9d9d9; }
+  .jekyllTimeline b label {
+    position: absolute;
+    top: 50%;
+    margin-top: -10px;
+    height: 20px;
+    width: 50px;
+    left: -45px;
+    color: #4d4d4d;
+    text-align: center;
+    font-weight: normal;
+    transform: rotateZ(270deg);
+    transition: all 0.15s ease-in-out; }
+  .jekyllTimeline b:hover label {
+    color: gray; }
+  .jekyllTimeline b i {
+    display: block;
+    box-sizing: border-box; }
+  .jekyllTimeline b i:nth-of-type(3n) {
+    border-bottom: 1px solid #f2f2f2; }
+  .jekyllTimeline b i:last-of-type {
+    border: none; }
+  .jekyllTimeline b i:hover {
+    background-color: rgba(0, 0, 0, 0.02); }
+  .jekyllTimeline .col {
+    position: relative;
+    flex: 1 1 50%;
+    margin-right: 10px;
+    pointer-events: none; }
+  .jekyllTimeline .event {
+    position: absolute;
+    padding: 3px 10px;
+    box-sizing: border-box;
+    width: 100%;
+    left: 0;
+    overflow: hidden;
+    border-radius: 2px;
+    pointer-events: all;
+    cursor: pointer;
+    transition: all 0.15s ease-in-out; }
+    .jekyllTimeline .event:hover {
+      box-shadow: inset 3px 0 0 0 rgba(0, 0, 0, 0.1), inset -3px 0 0 0 rgba(0, 0, 0, 0.1); }
+    .jekyllTimeline .event:focus {
+      box-shadow: inset 3px 0 0 0 rgba(0, 0, 0, 0.1), inset -3px 0 0 0 rgba(0, 0, 0, 0.1), 0 0 0 3px white, 1px 2px 10px 0 rgba(0, 0, 0, 0.15);
+      z-index: 1;
+      height: auto !important;
+      left: 20px;
+      outline: none; }
+  .jekyllTimeline .colTitle {
+    box-sizing: border-box;
+    font-size: 17px;
+    position: absolute;
+    padding: 0 10px;
+    width: 100%;
+    left: 0;
+    top: -50px;
+    height: 40px;
+    line-height: 40px; }
+    .jekyllTimeline .colTitle span {
+      display: inline-block;
+      line-height: 1.1; }
+  .jekyllTimeline .col1 .event {
+    background-color: #9dd7f9; }
+    .jekyllTimeline .col1 .event:nth-child(odd) {
+      background-color: #bae3fb; }
+  .jekyllTimeline .col2 .event {
+    background-color: #c0e589; }
+    .jekyllTimeline .col2 .event:nth-child(odd) {
+      background-color: #d3edac; }
+  .jekyllTimeline .col3 .event {
+    background-color: #f2e480; }
+    .jekyllTimeline .col3 .event:nth-child(odd) {
+      background-color: #f6eca6; }
+  .jekyllTimeline .col4 .event {
+    background-color: #ffcfa0; }
+    .jekyllTimeline .col4 .event:nth-child(odd) {
+      background-color: #ffddbd; }
+  .jekyllTimeline .col5 .event {
+    background-color: #e1d0ef; }
+    .jekyllTimeline .col5 .event:nth-child(odd) {
+      background-color: #eadef4; }
+  .jekyllTimeline .col1 .colTitle {
+    box-shadow: inset 0 -3px 0 0 #9dd7f9; }
+  .jekyllTimeline .col2 .colTitle {
+    box-shadow: inset 0 -3px 0 0 #c0e589; }
+  .jekyllTimeline .col3 .colTitle {
+    box-shadow: inset 0 -3px 0 0 #f2e480; }
+  .jekyllTimeline .col4 .colTitle {
+    box-shadow: inset 0 -3px 0 0 #ffcfa0; }
+  .jekyllTimeline .col5 .colTitle {
+    box-shadow: inset 0 -3px 0 0 #e1d0ef; }
+  .jekyllTimeline .event .title {
+    font-weight: 500; }
+  .jekyllTimeline .event .description {
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.6); }
+  .jekyllTimeline .event code {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(0, 0, 0, 0.1); }
+  .jekyllTimeline .event li {
+    line-height: 1.3;
+    margin-bottom: 5px; }
+  .jekyllTimeline .event a {
+    color: #262626;
+    text-decoration: underline; }
+
+@media print {
+  .jekyllTimelineWrapper {
+    background: white;
+    border: none;
+    box-shadow: none;
+    max-width: none; }
+
+  .jekyllTimeline .colTitle {
+    font-weight: 500; }
+
+  .jekyllTimeline b label {
+    left: -35px; } }
+@media (max-width: 603px) {
+  .jekyllTimeline b label {
+    left: -35px; }
+
+  .jekyllTimeline .event:focus {
+    left: 10px; } }
+
+/*# sourceMappingURL=jekyll-timeline.css.map */

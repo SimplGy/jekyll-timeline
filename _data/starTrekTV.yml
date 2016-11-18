@@ -1,0 +1,42 @@
+# https://en.wikipedia.org/wiki/Star_Trek#The_Original_Series_.281966.E2.80.9369.29
+
+- name: The Original Series
+  from: 1966-09-08
+  to: 1969-06-03
+  description: Captain James T. Kirk, Spock
+  link: https://en.wikipedia.org/wiki/Star_Trek:_The_Original_Series
+
+- name: The Animated Series
+  from: 1973-09-08
+  to: 1974-10-12
+  description: Canon status disputed, many voice actors and writers from orginal series
+  link: https://en.wikipedia.org/wiki/Star_Trek:_The_Animated_Series
+
+- name: The Next Generation
+  from: 1987-09-28
+  to: 1994-05-23
+  description: Captain Jean-Luc Picard, Enterprise-D
+  link: https://en.wikipedia.org/wiki/Star_Trek:_The_Next_Generation
+
+- name: Deep Space Nine
+  from: 1993-01-03
+  to: 1999-06-02
+  description: First to use CGI, last connected with Gene Roddenberry
+  link: https://en.wikipedia.org/wiki/Star_Trek:_Deep_Space_Nine
+
+- name: Voyager
+  from: 1995-01-16
+  to: 2001-05-23
+  description: Captain Kathryn Janeway, USS Voyager
+  link: https://en.wikipedia.org/wiki/Star_Trek:_Voyager
+
+- name: Enterprise
+  from: 2001-09-26
+  to: 2005-05-13
+  description: Jonathan Archer
+  link: https://en.wikipedia.org/wiki/Star_Trek:_Enterprise
+
+#- name: Discovery
+#  from: 2017-01-01
+#  to: now
+#  link: https://en.wikipedia.org/wiki/Star_Trek:_Discovery

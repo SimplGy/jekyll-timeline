@@ -1,4 +1,56 @@
-@import '../css/__'
+// Useful utilities
+$sizePhone: 603px
+$sizeTablet: 1024px
+@mixin phone
+  @media (max-width: $sizePhone)
+    @content
+
+// Blacks and Shades
+$black02:  mix( black, white, 02% )
+$shade02:       rgba( black, .02 )
+$black05:  mix( black, white, 05% )
+$shade05:       rgba( black, .05 )
+$black10:  mix( black, white, 10% )
+$shade10:       rgba( black, .10 )
+$black15:  mix( black, white, 15% )
+$shade15:       rgba( black, .15 )
+$black20:  mix( black, white, 20% )
+$shade20:       rgba( black, .20 )
+$black50:  mix( black, white, 50% )
+$shade50:       rgba( black, .50 )
+$black60:  mix( black, white, 60% )
+$shade60:       rgba( black, .60 )
+$black70:  mix( black, white, 70% )
+$shade70:       rgba( black, .70 )
+$black85:  mix( black, white, 85% )
+$shade85:       rgba( black, .85 )
+
+// Whites & Lights
+$white20:  mix( white, black, 20% )
+$light20:       rgba( white, .20)
+
+// Colors
+/* Coolors Exported Palette - coolors.co/9dd7f9-c0e589-f2e480-ffcfa0-e1d0ef */
+$color1: rgba(157, 215, 249, 1)
+$color2: rgba(192, 229, 137, 1)
+$color3: rgba(242, 228, 128, 1)
+$color4: rgba(255, 207, 160, 1)
+$color5: rgba(225, 208, 239, 1)
+
+// Color Manipulations
+// a is the base color, b is a lighter version
+
+// Semantic Colors
+$muted: $black70
+$semiMuted: $black50
+$darkText: $black85
+
+// "Reset"
+.jekyllTimeline
+  ol
+    list-style: none
+  p
+    margin: 0
 
 
 .jekyllTimelineWrapper
@@ -29,16 +81,6 @@
     background: linear-gradient(to bottom, transparent, white 65%) // Fade things off the bottom of the page if they overflow (eg: education)
 
 .jekyllTimeline
-
-  $green0: rgb(182,208,54)
-  $green1: mix($green0, white, 70%) //rgb(190, 208, 80)
-  $green2: mix($green0, white, 40%) //rgb(196, 215, 146)
-  $blue0: rgb(136, 181, 227) //rgb(155,180,212)
-  $blue1: mix($blue0, white, 70%)
-  $blue2: mix($blue0, white, 40%)
-  $orange0: $orangeLight
-  $orange1: mix($orange0, white, 100%)
-  $orange2: mix($orange0, white, 70%)
 
   $fontHuge: 60px
 
@@ -75,7 +117,7 @@
     text-align: center
     font-weight: normal
     transform: rotateZ(270deg)
-    +transitionable
+    transition: all 0.15s ease-in-out
 
   b:hover label
     color: $semiMuted
@@ -108,7 +150,7 @@
     //overflow-y: auto
     pointer-events: all // parent removed them so we can highlight the years
     cursor: pointer
-    +transitionable()
+    transition: all 0.15s ease-in-out
     &:hover
       box-shadow: inset 3px 0 0 0 $shade10, inset -3px 0 0 0 $shade10
     &:focus
@@ -128,55 +170,60 @@
     top: -50px
     height: 40px
     line-height: 40px
-    border-radius: 2px
     span
       display: inline-block
       line-height: 1.1
 
   // Colored Columns
-  .col0 .event
-    background-color: $green1
-    &:nth-child(odd)
-      background-color: $green2
   .col1 .event
-    background-color: $blue1
+    background-color: $color1
     &:nth-child(odd)
-      background-color: $blue2
+      background-color: mix($color1, white, 70%)
   .col2 .event
-    background-color: $orange1
+    background-color: $color2
     &:nth-child(odd)
-      background-color: $orange2
+      background-color: mix($color2, white, 70%)
+  .col3 .event
+    background-color: $color3
+    &:nth-child(odd)
+      background-color: mix($color3, white, 70%)
+  .col4 .event
+    background-color: $color4
+    &:nth-child(odd)
+      background-color: mix($color4, white, 70%)
+  .col5 .event
+    background-color: $color5
+    &:nth-child(odd)
+      background-color: mix($color5, white, 70%)
 
-  .col0 .colTitle
-    background-color: white
-    background-image: linear-gradient(to bottom, white 25%, $green1)
   .col1 .colTitle
-    background-color: white
-    background-image: linear-gradient(to bottom, white 25%, $blue1)
+    box-shadow: inset 0 -3px 0 0 $color1
   .col2 .colTitle
-    background-color: white
-    background-image: linear-gradient(to bottom, white 25%, $orange1)
+    box-shadow: inset 0 -3px 0 0 $color2
+  .col3 .colTitle
+    box-shadow: inset 0 -3px 0 0 $color3
+  .col4 .colTitle
+    box-shadow: inset 0 -3px 0 0 $color4
+  .col5 .colTitle
+    box-shadow: inset 0 -3px 0 0 $color5
 
 
-
-  // Special case Event content
-  .col0.event .title
-    font-weight: 500
-  .event .description
-    font-size: $fontTiny
-    color: $shade60
-
+  // Event content
+  .event
+    .title
+      font-weight: 500
+    .description
+      font-size: $fontTiny
+      color: $shade60
     code
       background: $light20
       border-color: $shade10
     li
       line-height: 1.3
       margin-bottom: 5px
-  .col0 .event a
-    color: $darkText
-    text-decoration: underline
-
-
+    a
+      color: $darkText
+      text-decoration: underline
 
 
 

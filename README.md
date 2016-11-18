@@ -13,7 +13,16 @@ This wasn't built to stagger overlapping timeframes, so it works best for use ca
 * Star Trek Seasons, Ships, and Captains
 * Star Wars films
 
+## Features
+
+* Hover for start and end dates, and to see event duration
+* hover timeline background to see which year/month it represents
+* Support for markdown inside timeline events, so you can include links and formatting
+* Click to focus an event (partial solution for overlapping events and those events with long description content)
+
 ## Examples
+
+Share your examples with me by creating an issue with a link to how you've used this. I'd love to extend this to show some of the awesome things people have created.
 
 Printable Resume Timeline ([live](http://simple.gy/resume/pretty)):
 
@@ -21,11 +30,49 @@ Printable Resume Timeline ([live](http://simple.gy/resume/pretty)):
 <img src="https://cloud.githubusercontent.com/assets/548809/20337440/62388d9c-ab8e-11e6-83ba-6d3526e2f969.png"/>
 </a>
 
-## Getting Started
+## Running Locally
 
-1. Clone the project or download the [`dist`](https://github.com/SimplGy/jekyll-timeline/tree/master/dist) folder
-2. Copy those files into your `_include` folder in jekyll
-3. Use them, following the examples I've provided in the [`examples`](https://github.com/SimplGy/jekyll-timeline/tree/master/examples) folder
+You can run this repo locally to explore the examples and play around with the options.
+
+To run this project, start it like you would any Jekyll site. eg:
+
+    bundle exec jekyll serve -w
+
+## Installation
+
+To use this project on your own sites, you can follow these steps.
+
+[Create a Jekyll Site](https://jekyllrb.com/docs/quickstart/) (skip this if you already have one):
+
+    ~ $ gem install jekyll bundler
+    ~ $ jekyll new myblog
+    ~ $ cd myblog
+    ~/myblog $ bundle exec jekyll serve
+
+Include the source files:
+
+1. Cloning this project or downloading the [`_includes`](https://github.com/SimplGy/jekyll-timeline/tree/master/_includes) folder
+2. Copy those files into your project's `_includes` folder
+
+Reference the Dependencies:
+
+1. include the css, either by moving `jekyll-timeline.css` into your `css` folder, or by using a [SASS import](http://sass-lang.com/guide)
+2. Create a small example (the fastest way is to [copy mine](https://github.com/SimplGy/jekyll-timeline/tree/master/_posts) at first)
+3. Customize by following the examples I've provided in the [`_posts`](https://github.com/SimplGy/jekyll-timeline/tree/master/_posts) folder
+
+Use on your page:
+
+
+<!-- {% include jekyll-timeline.html
+   startYear=2010
+   # This is a date near the oldest event you arere interested in showing. The timeline always runs up until now
+
+   timelineHeight=600
+   # Adjust this height until it fits your events comfortably
+
+   col1Title="Minimal Example"
+   col1Events=page.exampleEvents
+%} -->
 
 ## Key Benefits
 
