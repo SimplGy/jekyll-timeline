@@ -20,15 +20,33 @@ This wasn't built to stagger overlapping timeframes, so it works best for use ca
 * Support for markdown inside timeline events, so you can include links and formatting
 * Click to focus an event (partial solution for overlapping events and those events with long description content)
 
-## Examples
+## Example Gallery
 
-Share your examples with me by creating an issue with a link to how you've used this. I'd love to extend this to show some of the awesome things people have created.
+Minimal Configuration:
 
-Printable Resume Timeline ([live](http://simple.gy/resume/pretty)):
+<a href="http://www.simple.gy/jekyll-timeline/example-minimal/">
+<img src="https://github.com/SimplGy/jekyll-timeline/raw/master/_screencaps/simplegyjekylltimelineexampleminimal-clipped.png"/>
+</a>
+
+Five Columns:
+
+<a href="http://www.simple.gy/jekyll-timeline/five-col/">
+<img src="https://github.com/SimplGy/jekyll-timeline/raw/master/_screencaps/simplegyjekylltimelinefivecol-clipped.png"/>
+</a>
+
+Star Trek TV Series and Movies:
+
+<a href="http://www.simple.gy/jekyll-timeline/star-trek/">
+<img src="https://github.com/SimplGy/jekyll-timeline/raw/master/_screencaps/simplegyjekylltimelinestartrek-clipped.png"/>
+</a>
+
+My Resume Timeline:
 
 <a href="http://simple.gy/resume/pretty">
-<img src="https://cloud.githubusercontent.com/assets/548809/20337440/62388d9c-ab8e-11e6-83ba-6d3526e2f969.png"/>
+<img src="https://github.com/SimplGy/jekyll-timeline/raw/master/_screencaps/simplegyresumepretty-clipped.png"/>
 </a>
+
+Share your examples with me by creating an issue with a link to how you've used this. I'd love to extend this to show some of the awesome things people have created.
 
 ## Running Locally
 
