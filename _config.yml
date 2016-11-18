@@ -1,7 +1,7 @@
 title: "jekyll-timeline - Source and Examples"
 description: This is a small group of html and css includes for Jekyll that lets you create a beautiful timeline.
-# baseurl: "" # the subpath of your site, e.g. /blog
-# url: "" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/jekyll-timeline" # the subpath of your site, e.g. /blog
+url: "http://www.simple.gy/jekyll-timeline/" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: simplgy
 github_username:  simplgy
 permalink: /:title/
