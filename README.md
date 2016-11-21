@@ -56,41 +56,27 @@ To run this project, start it like you would any Jekyll site. eg:
 
     bundle exec jekyll serve -w
 
-## Installation
+It runs in a subfolder to match the deployment location. You can open the page at:
 
-To use this project on your own sites, you can follow these steps.
+    http://localhost:4000/jekyll-timeline/
 
-[Create a Jekyll Site](https://jekyllrb.com/docs/quickstart/) (skip this if you already have one):
+## Getting Started
 
-    ~ $ gem install jekyll bundler
-    ~ $ jekyll new myblog
-    ~ $ cd myblog
-    ~/myblog $ bundle exec jekyll serve
+To use this project on your own site, follow these steps.
 
-Include the source files:
+1. [Create a Jekyll Site](https://jekyllrb.com/docs/quickstart/) (skip this if you already have one):
+2. Get these two files () and put them in your site's [`_includes`](https://github.com/SimplGy/jekyll-timeline/tree/master/_includes) folder.
+  1. [jekyll-timeline.html](https://github.com/SimplGy/jekyll-timeline/tree/master/_includes/jekyll-timeline.html)
+  2. [jekyll-timeline-li-event.html](https://github.com/SimplGy/jekyll-timeline/tree/master/_includes/jekyll-timeline-li-event.html)
+3. Grab [jekyll-timeline.css](https://github.com/SimplGy/jekyll-timeline/tree/master/_includes/jekyll-timeline.css) and include a link tag to it.
+4. Use the timeline on your page:
 
-1. Cloning this project or downloading the [`_includes`](https://github.com/SimplGy/jekyll-timeline/tree/master/_includes) folder
-2. Copy those files into your project's `_includes` folder
-
-Reference the Dependencies:
-
-1. include the css, either by moving `jekyll-timeline.css` into your `css` folder, or by using a [SASS import](http://sass-lang.com/guide)
-2. Create a small example (the fastest way is to [copy mine](https://github.com/SimplGy/jekyll-timeline/tree/master/_posts) at first)
-3. Customize by following the examples I've provided in the [`_posts`](https://github.com/SimplGy/jekyll-timeline/tree/master/_posts) folder
-
-Use on your page:
-
-
-<!-- {% include jekyll-timeline.html
-   startYear=2010
-   # This is a date near the oldest event you arere interested in showing. The timeline always runs up until now
-
-   timelineHeight=600
-   # Adjust this height until it fits your events comfortably
-
-   col1Title="Minimal Example"
-   col1Events=page.exampleEvents
-%} -->
+    {% include jekyll-timeline.html
+       startYear=2010 # This is a date near the oldest event you are interested in showing. The timeline always runs up until now
+       timelineHeight=600 # Adjust this height until it fits your events comfortably
+       col1Title="Minimal Example"
+       col1Events=page.exampleEvents
+    %}
 
 ## Key Benefits
 

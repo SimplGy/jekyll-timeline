@@ -18,11 +18,11 @@
   description: Captain Jean-Luc Picard, Enterprise-D
   link: https://en.wikipedia.org/wiki/Star_Trek:_The_Next_Generation
 
-- name: Deep Space Nine
-  from: 1993-01-03
-  to: 1999-06-02
-  description: First to use CGI, last connected with Gene Roddenberry
-  link: https://en.wikipedia.org/wiki/Star_Trek:_Deep_Space_Nine
+#- name: Deep Space Nine
+#  from: 1993-01-03
+#  to: 1999-06-02
+#  description: First to use CGI, last connected with Gene Roddenberry
+#  link: https://en.wikipedia.org/wiki/Star_Trek:_Deep_Space_Nine
 
 - name: Voyager
   from: 1995-01-16
@@ -33,10 +33,7 @@
 - name: Enterprise
   from: 2001-09-26
   to: 2005-05-13
-  description: Jonathan Archer
-  link: https://en.wikipedia.org/wiki/Star_Trek:_Enterprise
+  description: |
+    Jonathan Archer
 
-#- name: Discovery
-#  from: 2017-01-01
-#  to: now
-#  link: https://en.wikipedia.org/wiki/Star_Trek:_Discovery
+    [wiki article](https://en.wikipedia.org/wiki/Star_Trek:_Enterprise)

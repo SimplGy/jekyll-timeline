@@ -34,7 +34,8 @@ use a float to get non-rounded output from `divided_by`: https://shopify.github.
 
 
 
-<div class="jekyllTimeline" style="height: {{include.timelineHeight}}px;"
+<div class="jekyllTimeline">
+<div class="inner" style="height: {{include.timelineHeight}}px;"
      data-comment="These data properties are for transparency; not actually used to build the timeline."
      data-site-time="{{ site.time | date: '%Y-%-m' }}"
      data-years-size="{{include.startYear}}-{{endYear}}: {{years.size}}"
@@ -117,4 +118,5 @@ use a float to get non-rounded output from `divided_by`: https://shopify.github.
     </ol>
   {% endif %}
 
+</div>
 </div>

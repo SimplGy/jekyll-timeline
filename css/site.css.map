@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AACA,IAAI;EACF,WAAW,EAAE,kFAAkF;EAC/F,WAAW,EAAE,GAAG;EAChB,SAAS,EAAE,IAAI;EACf,UAAU,EAAE,OAAO",
-"sources": ["site.sass"],
-"names": [],
-"file": "site.css"
-}

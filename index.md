@@ -2,9 +2,10 @@
 layout: base
 ---
 
-# jekyll-timeline Examples <small>[GitHub](https://github.com/SimplGy/jekyll-timeline)</small>
+# jekyll-timeline
+## A timeline for your GitHub Pages that doesn't need plugins or JavaScript
 
-
+### Examples 
 
 <ul>
   {% for post in site.posts %}
@@ -13,3 +14,15 @@ layout: base
     </li>
   {% endfor %}
 </ul>
+
+
+
+
+
+
+
+
+
+
+
+[GitHub](https://github.com/SimplGy/jekyll-timeline)

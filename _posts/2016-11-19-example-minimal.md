@@ -1,5 +1,5 @@
 ---
-title:  "Example: Minimal Configuration"
+title:  "Example 1: Minimal Configuration"
 layout: base
 
 exampleEvents:
@@ -21,6 +21,8 @@ exampleEvents:
 ---
 
 # {{ page.title }}
+
+A minimal configuration example.
 
 {% include jekyll-timeline.html
    startYear=2010

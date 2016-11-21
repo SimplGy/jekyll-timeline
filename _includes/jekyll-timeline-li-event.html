@@ -12,6 +12,7 @@ I also use this to calculate pretty date range display phrases
 
 
 {% comment %} ------------------------------------------ Constants -- {% endcomment %}
+{% assign minEventHeight = 24.0 %}
 {% assign secondsPerMonth = 2628288.0 %}
 {% comment %} 60 * 60 * 24 * 30.42. It must be be a float (end with .0) so divided_by doesn't floor the result {% endcomment %}
 
@@ -50,7 +51,13 @@ height: to - from ( / sPerMonth * pxPerMonth)
 {% assign top = eventAge | plus: monthOffset | times: include.pxPerMonth %}
 {% assign eventLength = to | minus: from | divided_by: secondsPerMonth | plus: 1 %}
 {% comment %} plus: 1 to be inclusive. If I worked from 2016-01 to 2016-02, I should cover both months {% endcomment %}
-{% assign height = eventLength | times: include.pxPerMonth %}
+{% assign h = eventLength | times: include.pxPerMonth %}
+{% if h < minEventHeight %}
+  {% assign height = minEventHeight %}
+{% else %}
+  {% assign height = h %}
+{% endif %}
+
 
 
 {% comment %} ---------------------------------------- Set display strings --- {% endcomment %}
