@@ -80,7 +80,7 @@ To use this project on your own site, follow these steps.
 
 ## Key Benefits
 
-* No Jeykll plugins needed (this is why you can use it with GitHub Pages)
+* No Jekyll plugins needed (this is why you can use it with GitHub Pages)
 * No JavaScript at all, so it's easy to customize
 * Prints almost pixel perfect (webkit only. Thanks to [`-webkit-print-color-adjust`](https://developer.mozilla.org/en-US/docs/Web/CSS/-webkit-print-color-adjust))
 
